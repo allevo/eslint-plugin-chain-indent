@@ -1,0 +1,34 @@
+{
+  "name": "eslint-plugin-chain-indent",
+  "version": "1.0.0",
+  "description": "Indent chain correctly",
+  "main": "index.js",
+  "scripts": {
+  	"lint": "eslint .",
+    "test": "mocha --recursive test",
+    "coverage": "istanbul cover _mocha -- test --recursive --report HTML",
+    "travis": "istanbul cover _mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allevo/eslint-plugin-chain-indent.git"
+  },
+  "keywords": [
+  	"eslintplugin",
+  	"eslint",
+  	"chain"
+  ],
+  "author": "allevo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allevo/eslint-plugin-chain-indent/issues"
+  },
+  "homepage": "https://github.com/allevo/eslint-plugin-chain-indent",
+  "devDependencies": {
+    "coveralls": "^2.11.13",
+    "eslint": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2",
+    "mocha-lcov-reporter": "^1.2.0"
+  }
+}
